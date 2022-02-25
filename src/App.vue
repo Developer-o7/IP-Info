@@ -1,5 +1,8 @@
 <script>
   export default {
+    methods: {
+      
+    },
     data() {
       return {
         ip: '',
