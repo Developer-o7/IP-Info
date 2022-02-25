@@ -46,27 +46,32 @@
         <div class="box">
           <p>IP:</p>
           <hr>
-          <span>{{ ip }}</span>
+          <span v-if="this.ip !== ''">{{ ip }}</span>
+           <small v-else>Loading..</small>
         </div>
         <div class="box">
           <p>City:</p>
           <hr>
-          <span>{{ city }}</span>
+          <span v-if="this.city !== ''">{{ city }}</span>
+           <small v-else>Loading..</small>
         </div>
         <div class="box">
           <p>Country:</p>
           <hr>
-          <span>{{ country }}</span>
+          <span v-if="this.country !== ''">{{ country }}</span>
+           <small v-else>Loading..</small>
         </div>
         <div class="box">
           <p>Region:</p>
           <hr>
-          <span>{{ region }}</span>
+          <span v-if="this.region !== ''">{{ region }}</span>
+           <small v-else>Loading..</small>
         </div>
         <div class="box">
           <p>Timezone:</p>
           <hr>
-          <span>{{ timezone }}</span>
+          <span v-if="this.region !== ''">{{ timezone }}</span>
+          <small v-else>Loading..</small>
         </div>
       </div>
     </div>
@@ -89,16 +94,20 @@ span{
 }
 
 .box{
-  width: 30%;
-  border: 4px solid;
+  width: 45%;
   border-left: 3px solid;
   border-right: 3px solid;
-  border-radius: 10px 10px 0px 0px;
-  margin: 0px 10px;
+  border-radius: 15px 15px 15px 15px;
 }
 
 .box span:nth-child(1){
   font-weight: 800;
   font-size: 22px;
+}
+
+small{
+  color: #ff0000;
+  font-size: 15px;
+  font-weight: 700;
 }
 </style>
