@@ -3,7 +3,8 @@
     data() {
       return {
         ip: '',
-        city: ''
+        city: '',
+        region: ''
       }
     },
   }
