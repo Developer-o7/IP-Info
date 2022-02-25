@@ -2,14 +2,14 @@
   import axios from 'axios'
   export default {
     created () {
-      this.saveDate
+      this.saveDate()
     },
 
     methods: {
       async saveDate(){
         try{
-          const getIp = await axios.get('https://api.ipify.org?format=json')
-          console.log(getIp);
+          const { data } = await axios.get('https://api.ipify.org?format=json')
+          console.log(data.ip);
         } catch(error){
           console.error();
         }
