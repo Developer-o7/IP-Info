@@ -1,7 +1,13 @@
 <script>
   export default {
     methods: {
-      
+      async saveDate(){
+        try{
+
+        } catch(error){
+          console.error();
+        }
+      }
     },
     data() {
       return {
