@@ -1,11 +1,12 @@
-<script setup>
+<script>
   export default {
     data() {
       return {
         ip: '',
         city: '',
         region: '',
-        country: ''
+        country: '',
+        timezona: ''
       }
     },
   }
