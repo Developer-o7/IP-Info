@@ -9,7 +9,12 @@
       async saveDate(){
         try{
           const { data } = await axios.get('https://api.ipify.org?format=json')
-          console.log(data.ip);
+          console.log(data.ip)
+
+          axios.get(`https://ipinfo.io/${data}/geo`)
+          .then(res => {
+            console.log(res.data)
+          })
         } catch(error){
           console.error();
         }
@@ -34,7 +39,7 @@
       <h2>Your IP Address Info</h2>
       <div class="flex card">
         <div class="box">
-          <p>Hello</p>
+          <p>IP: ''{{ ip }}''</p>
           <br>
           <span>111</span>
         </div>
