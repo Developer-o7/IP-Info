@@ -4,7 +4,8 @@
       return {
         ip: '',
         city: '',
-        region: ''
+        region: '',
+        country: ''
       }
     },
   }
