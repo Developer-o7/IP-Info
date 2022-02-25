@@ -1,10 +1,15 @@
 <script>
   import axios from 'axios'
   export default {
+    created () {
+      this.saveDate
+    },
+
     methods: {
       async saveDate(){
         try{
           const getIp = await axios.get('https://api.ipify.org?format=json')
+          console.log(getIp);
         } catch(error){
           console.error();
         }
