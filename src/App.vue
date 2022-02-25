@@ -41,8 +41,10 @@
 <br>
   <div class="container">
     <div class="card center">
-      <h2>Your IP Address Info</h2>
-      <div class="flex card">
+      <h2>Want to know your IP address?</h2>
+      <button class="btn primary" @click="saveDate()">Click me</button>
+      <br> <br>
+      <div v-show="saveDate()" class="flex card">
         <div class="box">
           <p>IP:</p>
           <hr>
