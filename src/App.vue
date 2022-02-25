@@ -9,14 +9,14 @@
       async saveDate(){
         try{
           const { data } = await axios.get('https://api.ipify.org?format=json')
-          console.log(data.ip)
+          console.log(data)
 
-          axios.get(`https://ipinfo.io/${data}/geo`)
+          axios.get(`http://ip-api.com/json/${data.ip}`)
           .then(res => {
             console.log(res.data)
           })
         } catch(error){
-          console.error();
+          console.log(error)
         }
       }
     },
@@ -88,11 +88,11 @@ span{
   border: 4px solid;
   border-left: 3px solid;
   border-right: 3px solid;
-  border-radius: 18px 0px 18px 0px;
+  border-radius: 10px 10px 0px 0px;
   margin: 0px 10px;
 }
 
-.box span:nth:nth-child(1){
+.box span:nth-child(1){
   font-weight: 800;
   font-size: 22px;
 }
