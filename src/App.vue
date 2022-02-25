@@ -14,6 +14,11 @@
           axios.get(`http://ip-api.com/json/${data.ip}`)
           .then(res => {
             console.log(res.data)
+            this.ip = res.data.query
+            this.city = res.data.city
+            this.country = res.data.country
+            this.region = res.data.region
+            this.timezone = res.data.timezone
           })
         } catch(error){
           console.log(error)
@@ -26,7 +31,7 @@
         city: '',
         region: '',
         country: '',
-        timezona: ''
+        timezone: ''
       }
     },
   }
@@ -39,29 +44,29 @@
       <h2>Your IP Address Info</h2>
       <div class="flex card">
         <div class="box">
-          <p>IP: ''{{ ip }}''</p>
-          <br>
-          <span>111</span>
+          <p>IP:</p>
+          <hr>
+          <span>{{ ip }}</span>
         </div>
         <div class="box">
-          <p>Hello</p>
-          <br>
-          <span>111</span>
+          <p>City:</p>
+          <hr>
+          <span>{{ city }}</span>
         </div>
         <div class="box">
-          <p>Hello</p>
-          <br>
-          <span>111</span>
+          <p>Country:</p>
+          <hr>
+          <span>{{ country }}</span>
         </div>
         <div class="box">
-          <p>Hello</p>
-          <br>
-          <span>111</span>
+          <p>Region:</p>
+          <hr>
+          <span>{{ region }}</span>
         </div>
         <div class="box">
-          <p>Hello</p>
-          <br>
-          <span>111</span>
+          <p>Timezone:</p>
+          <hr>
+          <span>{{ timezone }}</span>
         </div>
       </div>
     </div>
@@ -72,7 +77,7 @@
 <style>
 span{
   display: block;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .flex{
@@ -84,7 +89,7 @@ span{
 }
 
 .box{
-  width: 20%;
+  width: 30%;
   border: 4px solid;
   border-left: 3px solid;
   border-right: 3px solid;
