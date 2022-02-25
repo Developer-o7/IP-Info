@@ -50,5 +50,30 @@
 </template>
 
 <style>
+span{
+  display: block;
+  margin-bottom: 7px;
+}
 
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  text-align: center;
+}
+
+.box{
+  width: 20%;
+  border: 4px solid;
+  border-left: 3px solid;
+  border-right: 3px solid;
+  border-radius: 18px 0px 18px 0px;
+  margin: 0px 10px;
+}
+
+.box span:nth:nth-child(1){
+  font-weight: 800;
+  font-size: 22px;
+}
 </style>
