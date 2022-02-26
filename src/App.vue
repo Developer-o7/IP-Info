@@ -1,11 +1,16 @@
 <script>
   import axios from 'axios'
   export default {
-    created () {
-      this.saveDate()
-    },
+    // created () {
+    //   this.saveDate()
+    // },
 
     methods: {
+      async openBtn () {
+        this.saveDate()
+        this.showText = !this.showText
+      },
+
       async saveDate(){
         try{
           const { data } = await axios.get('https://api.ipify.org?format=json')
@@ -31,7 +36,8 @@
         city: '',
         region: '',
         country: '',
-        timezone: ''
+        timezone: '',
+        showText: false
       }
     },
   }
@@ -42,9 +48,9 @@
   <div class="container">
     <div class="card center">
       <h2>Want to know your IP address?</h2>
-      <button class="btn primary" @click="saveDate()">Click me</button>
+      <button @click="openBtn()" class="btn primary">Click me</button>
       <br> <br>
-      <div v-show="saveDate()" class="flex card">
+      <div v-if="showText" class="flex card">
         <div class="box">
           <p>IP:</p>
           <hr>
